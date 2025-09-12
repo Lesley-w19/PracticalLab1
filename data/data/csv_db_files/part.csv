@@ -1,0 +1,16 @@
+﻿PART_ID,TYPE,COMMENTS,DETAIL_ID
+1,Joint,Joint 1,1
+2,Joint,Joint 2,1
+3,Joint,Joint 3,1
+4,Joint,Joint 4,1
+5,Joint,Joint 5,1
+6,Joint,Joint 6,1
+7,Joint,Joint 7,1
+8,Joint,Joint 1 FANUC,4
+9,Servo,Comment 2,2
+10,Bearing,Comment 2,2
+11,Motor,Comment 2,1
+12,Torque Tube,Comment 2,1
+13,RV Gear,Comment 2,1
+14,Cable,Comment 2,1
+15,Encoder,Comment 3,1

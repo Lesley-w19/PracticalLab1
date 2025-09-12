@@ -1,0 +1,9 @@
+﻿TYPE_ID,TYPE_CLASS,IP_ADDRESS,TYPE_INSTANCE,DETAIL_ID,SHOP_ID
+1,Robot,10.34.22.183,Spot,1,1
+2,Robot,10.34.22.183,Matehan,2,1
+3,Robot,10.34.22.183,Sealer,3,1
+4,Robot,10.34.22.183,HEM,4,1
+5,Robot,10.34.22.183,Bond,6,1
+6,Robot,10.34.22.183,Grommet,5,1
+7,Controller,10.34.22.183,Spot,7,1
+8,Controller,10.34.22.183,Sealer,8,1
