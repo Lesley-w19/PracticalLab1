@@ -1,7 +1,0 @@
-﻿FEED_ID,KEY,VALUE
-1,NAME,Electrical Current
-1,UNIT,Kilo Volt
-2,NAME,Temperature
-2,UNIT,Degrees Celsius
-2,UPPER LIMIT,40.00
-2,LOWER LIMIT,5.00
