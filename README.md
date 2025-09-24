@@ -1,0 +1,100 @@
+# 🏡 Data Streaming and Visualization Workshop
+- Streaming Data for Predictive Maintenance with Linear Regression-Based Alerts
+
+##  📘 Use case: Manufacturing Robot predictive Maintenance ---
+
+## Project overview
+This notebook includes: 
+- data loading and cleaning with pandas; numeric work with NumPy; plots with matplotlib; training a linear regression model (scikit-learn)
+- data live streaming, generation of synthetic datasets, addition of anomaly to the sythetic dataset, visualization of Alerts and Errors based on MinC and MaxC chosen.
+
+### 🚀 Project Summary
+This project demonstrates a Manufacturing Robot Predictive Maintenance use case. The notebook walks through data collection, cleaning, visualization, and predictive modeling. Linear Regression is used to understand patterns in robot sensor data, and alert rules are applied to anticipate potential failures before they occur.
+
+Key features:
+- Data loading and cleaning with pandas
+- Numerical computations with NumPy
+- Visualizations with matplotlib
+- Linear Regression modeling with scikit-learn
+- Predictive alerts for maintenance decisions
+
+
+## 🛠️ Requirements
+- Python 3.8+ (recommended)
+- Python packages (install via pip):
+  - IPython
+  - matplotlib
+  - numpy
+  - os
+  - pandas
+  - plot_dashboard
+  - psycopg2
+  - scipy
+  - sklearn
+  - sqlalchemy
+  - time
+
+
+## 📂 Repository Contents
+
+- **`PracticalLab1.ipynb`**  
+  The main notebook containing all explanations, exercises, and challenges.  
+- **`data/`**  
+  The datasets (e.g., `synthetic_dataset.csv`) used in the code.  
+- **`images/`**  
+  Illustrations and screenshots used to support the explanations.   
+
+---
+
+
+
+## Creating your environment
+---
+
+- Start by creating a Virtual Environment for your project
+
+Before running any code in this notebook, it's important to set up a clean Python environment to manage dependencies. We recommend using a **VENV-type virtual environment** in **Visual Studio Code (VSC)**. Follow these steps:
+
+### ✅ Steps to Create a Virtual Environment in VSC
+
+1. **Open your project folder** in Visual Studio Code.
+2. **Create the virtual environment** by running:
+   ```bash
+   python -m venv .venv
+   ```
+3. Once the environment is created, **activate it**.
+    On Windows:
+    ```bash
+    .\venv\Scripts\activate
+    ```
+
+## How to run your workshop
+1. Make sure Python and the required packages are installed.
+2. Open the notebook `PracticalLab1.ipynb` in Jupyter Notebook or JupyterLab.
+3. Run the cells in order (Kernel → Restart & Run All) to reproduce the steps and outputs.
+4. You can also run parts of the notebook one cell at a time while following the comments.
+
+
+## Step-by-step
+1. Create staging table in Neon (if not already created)
+2. Load CSV into pandas
+3. Rename columns to match staging table
+4. Keep only the required columns
+5. Convert time to proper datetime
+6. Insert into staging table
+7. Min-Max normalization (if needed)
+
+
+## Regression and Alert Rules
+- Linear Regression models are trained on axis data vs. time to predict future sensor values.
+- R² scores measure the accuracy of each regression.
+- Alert rules:
+  - If the predicted trend deviates significantly from actual values, raise an alert.
+  - Thresholds can be adjusted based on tolerance levels in production.
+
+
+## Screenshots and Plots of Results
+The notebook generates several plots to illustrate the analysis:
+- All Axes Plot: Combined visualization of sensor axes.
+- Scatter + Regression Lines: For each axis, regression predictions overlayed on raw data.
+- Prediction vs. Time Graphs: To show how models forecast future values.
