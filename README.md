@@ -50,7 +50,6 @@ Key features:
 
 ## Creating your environment
 ---
-
 - Start by creating a Virtual Environment for your project
 
 Before running any code in this notebook, it's important to set up a clean Python environment to manage dependencies. We recommend using a **VENV-type virtual environment** in **Visual Studio Code (VSC)**. Follow these steps:
@@ -84,9 +83,29 @@ Before running any code in this notebook, it's important to set up a clean Pytho
 6. Insert into staging table
 7. Min-Max normalization (if needed)
 
+## Data Streming for the Original Data
+![Live Data Streaming ](./images/original_streaming_plot.png)
 
 ## Regression and Alert Rules
+`Generation of the Synthetic Data`
+- 📊 Data Comparison Table
+| Axis   |   orig_mean |   synth_mean |   orig_std |   synth_std |
+|:-------|------------:|-------------:|-----------:|------------:|
+| axis1  |    0.725743 |     0.749652 |   2.16212  |    2.1634   |
+| axis2  |    3.61337  |     3.63082  |   6.87996  |    6.83079  |
+| axis3  |    2.71034  |     2.71424  |   5.1119   |    5.11477  |
+| axis4  |    0.620222 |     0.633391 |   1.5749   |    1.56463  |
+| axis5  |    0.954521 |     0.959474 |   2.10019  |    2.09259  |
+| axis6  |    0.599427 |     0.619406 |   1.8155   |    1.8136   |
+| axis7  |    0.870145 |     0.893502 |   2.16681  |    2.17761  |
+| axis8  |    0.102214 |     0.105805 |   0.423075 |    0.422077 |
+
+
+`Normal Distribution curves for all axes`
+![Normal Distribution Curve](./images/normal_distribution_plots.png)
+
 - Linear Regression models are trained on axis data vs. time to predict future sensor values.
+
 - R² scores measure the accuracy of each regression.
 - Alert rules:
   - If the predicted trend deviates significantly from actual values, raise an alert.
