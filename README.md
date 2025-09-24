@@ -88,7 +88,9 @@ Before running any code in this notebook, it's important to set up a clean Pytho
 
 ## Regression and Alert Rules
 `Generation of the Synthetic Data`
+
 - 📊 Data Comparison Table
+
 | Axis   |   orig_mean |   synth_mean |   orig_std |   synth_std |
 |:-------|------------:|-------------:|-----------:|------------:|
 | axis1  |    0.725743 |     0.749652 |   2.16212  |    2.1634   |
