@@ -107,15 +107,33 @@ Before running any code in this notebook, it's important to set up a clean Pytho
 ![Normal Distribution Curve](./images/normal_distribution_plots.png)
 
 - Linear Regression models are trained on axis data vs. time to predict future sensor values.
+[!Linear_RegressionPLot1](./images/regression_plots_axis1.png)
 
-- R² scores measure the accuracy of each regression.
+
+
 - Alert rules:
   - If the predicted trend deviates significantly from actual values, raise an alert.
   - Thresholds can be adjusted based on tolerance levels in production.
 
+- 🔍  Why the Choice of MinC and MaxC
+
+We use the regression error’s standard deviation as a baseline. Alerts are set at 2 times this value, meaning unusual but possible changes, while Errors are 4 times bigger, showing very rare and serious issues. The median time step makes anomalies last realistically, not just as single spikes.
+
+
+✅ So, the design choice here is statistical + practical:
+
+* `2σ` → realistic but detectable Alerts.
+* `4σ` → extreme, rare, unmistakable Errors.
+* `median_dt` → ensures anomaly blocks respect the dataset’s time granularity.
 
 ## Screenshots and Plots of Results
-The notebook generates several plots to illustrate the analysis:
-- All Axes Plot: Combined visualization of sensor axes.
-- Scatter + Regression Lines: For each axis, regression predictions overlayed on raw data.
-- Prediction vs. Time Graphs: To show how models forecast future values.
+-`Prediction vs. Time Graphs: To show how models forecast future values.`
+- During streaming simulation (Step 11), actual sensor values are plotted alongside regression forecasts.
+
+Alert periods are highlighted with colored spans:
+
+  - Orange = Alert
+
+  - Red = Error
+
+This creates a dashboard-style visualization of how the model tracks data in real-time and where anomalies occur.
